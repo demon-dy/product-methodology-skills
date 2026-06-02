@@ -4,6 +4,16 @@
 
 > Two product-methodology skills for AI agents — one diagnoses *whether a direction is worth doing*, the other drives a product *through validated lifecycle stages*. Built for Claude Code and Agent-Skills-compatible runtimes.
 
+**快速安装（Claude Code 插件市场）：**
+
+```text
+/plugin marketplace add demon-dy/product-methodology-skills
+/plugin install true-demand@product-methodology
+/plugin install product-stagegate@product-methodology
+```
+
+详见 [安装](#安装)（含手动复制方式）。
+
 ## 两个 skill（不同维度，互锁不合并）
 
 | skill | 角色 | 回答什么 | 何时触发 |
