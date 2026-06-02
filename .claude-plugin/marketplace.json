@@ -1,0 +1,30 @@
+{
+  "name": "product-methodology",
+  "description": "产品方法论 skills：判断方向该不该做（true-demand）+ 推进产品阶段（product-stagegate）。Product-methodology skills for AI agents.",
+  "owner": {
+    "name": "duyu",
+    "url": "https://github.com/demon-dy"
+  },
+  "plugins": [
+    {
+      "name": "true-demand",
+      "description": "诊断罗盘：用户不必预先分类问题，自动判断商业卡点在「价值/共识/模式/求真」哪一环，给出带量化成败信号的最小验证动作。Diagnoses whether a product/demand problem is blocked on value, consensus, mode, or weak validation.",
+      "source": "./plugins/true-demand",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": { "name": "duyu", "url": "https://github.com/demon-dy" },
+      "homepage": "https://github.com/demon-dy/product-methodology-skills",
+      "keywords": ["product", "demand-validation", "mvp", "pmf", "business-model", "真需求"]
+    },
+    {
+      "name": "product-stagegate",
+      "description": "推进关卡：按 Demo→MVP→PMF→GTM→MTU 五关推进，用真实数据判断是否通关、给下一步或止损，并先判断项目是否适用本框架。Drives a product through validated lifecycle gates with real-data pass/fail checks.",
+      "source": "./plugins/product-stagegate",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": { "name": "duyu", "url": "https://github.com/demon-dy" },
+      "homepage": "https://github.com/demon-dy/product-methodology-skills",
+      "keywords": ["product", "aarrr", "pmf", "retention", "stage-gate", "go-to-market", "科学做产品"]
+    }
+  ]
+}

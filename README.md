@@ -18,21 +18,32 @@
 
 ## 安装
 
-每个 skill 是一个独立文件夹（`SKILL.md` + `references/`），自包含、无外部依赖。
+本仓库同时是一个 **Claude Code 插件市场**，提供两种安装方式。
 
-**Claude Code** — 复制到全局或项目的 skills 目录：
+### 方式 A：插件市场（推荐，Claude Code）
+
+在 Claude Code 里依次执行：
+
+```text
+/plugin marketplace add demon-dy/product-methodology-skills
+/plugin install true-demand@product-methodology
+/plugin install product-stagegate@product-methodology
+```
+
+也可以只 `/plugin marketplace add` 后，在 `/plugin` 面板里浏览这两个插件、按需安装。安装后 skill 即可用，可显式调用 `/true-demand:true-demand`、`/product-stagegate:product-stagegate`，或自然描述产品问题让它按 description 自动触发。更新：`/plugin marketplace update product-methodology`。
+
+### 方式 B：手动复制（任意兼容运行时）
+
+每个 skill 是一个自包含文件夹（`SKILL.md` + `references/`），无外部依赖：
 
 ```bash
 git clone https://github.com/demon-dy/product-methodology-skills.git
-# 全局可用：
-cp -r product-methodology-skills/skills/true-demand       ~/.claude/skills/
-cp -r product-methodology-skills/skills/product-stagegate ~/.claude/skills/
+cp -r product-methodology-skills/plugins/true-demand/skills/true-demand             ~/.claude/skills/
+cp -r product-methodology-skills/plugins/product-stagegate/skills/product-stagegate ~/.claude/skills/
 # 或只在某个项目里用：cp 到该项目的 .claude/skills/ 下
 ```
 
-重开一个会话即可被发现。之后自然描述你的产品问题，skill 会按 description 自动触发；也可显式说"用 true-demand 分析……"。
-
-**其他兼容运行时**：按各自的 skill 安装方式放入对应目录即可，`SKILL.md` 的 frontmatter 遵循通用 Agent Skills 规范。
+重开一个会话即可被发现。其他兼容运行时按各自的 skill 安装方式放入对应目录即可，`SKILL.md` frontmatter 遵循通用 Agent Skills 规范。
 
 ## 这两个 skill 是怎么打磨的
 
