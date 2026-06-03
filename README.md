@@ -24,7 +24,7 @@
 - **true-demand**：用商业闭环方法，自动判断卡点在「价值 / 共识 / 模式 / 求真」哪一环，给出带量化成败信号的最小验证动作——**不要求用户先把问题分类**。
 - **product-stagegate**：按 `Demo → MVP → PMF → GTM → MTU` 五关推进，用真实数据（拒绝"感觉 / 口头反馈 / DAU"）判断是否通关，给下一步动作或止损决定，并先判断项目**是否适用**本框架（合同 / 合规 / 内部工具 / 成熟业务 / 创作类会主动转向）。
 
-**接缝**：true-demand 判完"值得做" → 进 product-stagegate 的 Demo 关；product-stagegate 某一关数字难看 → 回到 true-demand 做"为什么卡"的深度归因。一个是仪表盘和关卡，一个是修理工。
+**自包含闭环（接缝已内置进各自 SKILL.md，不依赖外部 orchestrator）**：true-demand 判完"值得做" → 进 product-stagegate 的 Demo 关；product-stagegate 某一关数字难看 → 回到 true-demand 按「关卡→归因」映射做"为什么卡（价值/共识/模式/求真，缺功能/情绪/资产哪类价值）"的深度归因 → 落到最小验证动作 → 重测该关。由同一会话内的模型依次应用两个 skill 完成。一个是仪表盘和关卡，一个是修理工。
 
 ## 安装
 

@@ -1,7 +1,7 @@
 {
   "name": "product-stagegate",
   "description": "推进关卡：按 Demo→MVP→PMF→GTM→MTU 五关推进，用真实数据判断是否通关、给下一步或止损，并先判断项目是否适用本框架。",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": { "name": "duyu", "url": "https://github.com/demon-dy" },
   "homepage": "https://github.com/demon-dy/product-methodology-skills",
   "repository": "https://github.com/demon-dy/product-methodology-skills",

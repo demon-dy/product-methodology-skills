@@ -1,7 +1,7 @@
 {
   "name": "true-demand",
   "description": "诊断罗盘：自动判断商业卡点在「价值/共识/模式/求真」哪一环，给出带量化成败信号的最小验证动作，不要求用户先把问题分类。",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": { "name": "duyu", "url": "https://github.com/demon-dy" },
   "homepage": "https://github.com/demon-dy/product-methodology-skills",
   "repository": "https://github.com/demon-dy/product-methodology-skills",

@@ -29,7 +29,7 @@ description: Use when someone is building or running a new product (C-end or sma
 3. 取该关的核心问题 / 核心指标 / 通关标准（references/stages.md）
 4. 用真实数据判断通没通——不接受"我觉得 / 大家都说 / 口头愿意"
 5. 通关 → 给跃迁判断 + 下一关该验什么
-   未通关 → 给该关最该做的一个动作（带数字目标和失败信号）
+   未通关 → 先按「关卡没过→归因」表归到价值/共识/模式/求真某类（转 true-demand 深挖），再给该关最该做的一个动作（带数字目标和失败信号）
 6. 检查止损线（references/self-check.md）：是否该停下来做方向复盘
 全程套 6 原则（references/principles.md），尤其：数据说话、假设证伪、区分观察与解释、结论可操作
 ```
@@ -55,6 +55,21 @@ description: Use when someone is building or running a new product (C-end or sma
 3. **数字目标 + 失败信号**：这个动作做到什么数算成、做不到什么数就触发止损/方向复盘。
 
 > 例（未过 PMF）：「你在 PMF 关，留存还没趋平。下一步只做一件事：把 Day30 留存和 Sean Ellis 测出来（≥30 位活跃用户）。趋平且 Sean Ellis ≥40% 才进 GTM；若运营满 3 个月仍不趋平、Sean Ellis <25%，触发方向复盘。」
+
+## 关卡没过 → 归因（与 true-demand 合成闭环，不依赖外部 Agent）
+
+本 skill 定位"卡在哪一关"，但**为什么卡、该补哪一类**由 `true-demand` skill 回答。两者是一个闭环：定位到某关没过后，**不要止步于"去测某指标"**，先按下表把失败归到「价值/共识/模式/求真」哪一类，再转入 `true-demand` 对该类深挖，最后落到一个最小验证动作。这一步在**同一会话内**完成——你（当前模型）依次读取并应用两个 skill 即可，无需第二个 Agent。
+
+| 卡在哪一关 | 最可能的归因类别 | 进 true-demand 读 |
+|---|---|---|
+| Demo 不过（问题不被确认） | 价值·真需求 / 求真（是否伪需求、是否应然想象） | `value-models` + `truth-seeking` |
+| MVP 激活不够 | 价值·感知 / 共识·场景 | `value-models` + `consensus-tools` |
+| MVP 不付费 | 价值（功能/情绪/资产哪类撑定价）/ 求真（口头≠付费） | `value-models` + `truth-seeking` |
+| PMF 留存差 | 价值深度（功能用完即走？缺情绪/资产钩子）/ 共识（人设·场景）/ 求真（指标或应然假设读错） | `value-models` + `consensus-tools` + `truth-seeking` |
+| GTM 不成立 | 模式（拿谁的钱/能力系统/安全边界） | `mode-design` |
+| MTU 不转 | 模式 / 共识·关系（认同·归属才会推荐） | `mode-design` + `consensus-tools` |
+
+**归因给的是"最可能的 1–2 类原因 + 该测什么"的假设，不是判决。** 确证哪类是真因，必须回到真实用户/数据——这正是接下来那个最小验证动作要暴露的。当 true-demand 判定"价值成立、值得做"时，反向交回本 skill 的 Demo 关开始分阶段验证。
 
 ## 三条铁律（最常被违反）
 
